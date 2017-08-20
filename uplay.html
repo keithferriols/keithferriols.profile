@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+  <title>uPlay - Keith Ferriols</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="style_inner.css" />  
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<script type="text/javascript">
+function GetFileName()
+{
+  var file = location.href.substring(location.href.lastIndexOf('/')+1);
+  //spit.
+  var fileName =file.split('.');
+  alert(fileName[0]);
+}
+  $('body').addClass('louden-background')
+</script>
+<header>
+  <nav class="navbar">
+    <div class="logo">
+    <a href="index.html">
+      <img src="img/logo-icon@2x.png" alt="" />
+    </a>
+    </div>
+  </nav>
+</header>
+
+<div class="header-container">
+  <div class="header-tint-uplay uplay-header">
+  </div>
+  <div class="title-art title-uplay">
+  <img src="img/uplay-assets/uplay-cover-title@2x.png" alt="" />
+  </div>
+  <div class="description-details">
+  <div class="concept concept-art">CONCEPT</div>
+  <div class="description description-art">I wanted to create an application that would allow users to follow their favorite artists and quickly visualize the hottest trends in the music industry. They would also be able to closely follow the latest news of artists in relation to user’s selection. Running with this idea I designed a page that would allow for seamless interaction between the user and the product.</div>
+  </div>
+</div>
+
+<div class="second-content">
+  <div class="desktop-prandium-full">
+    <img src="img/uplay-assets/desktop-uplay-full@0,75x.png" alt="" />
+  </div>
+  <div class="color-info-art">
+    <div class="prandium-title-color">PRIMARY COLORS</div>
+    <div class="color-grid">
+    <div class="color-grid-art">
+      <div class="color primary-color-first-art css3-shadow uplay-color1">
+        <p>#FB7DB2</p>
+      </div>
+      <div class="color primary-color-second-art css3-shadow uplay-color2">
+        <p>#AC64E4</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="color-info-art-sec">
+    <div class="prandium-title-color">SECONDARY COLORS</div>
+    <div class="second-color">
+    <div class="color-grid-art-" >  
+      <div class="color primary-color-first-art-sec css3-shadow uplay-color3">
+        <p>#09A0F6</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="desktop-prandium-half">
+    <img src="img/uplay-assets/uplay-screen.png" alt="" />
+  </div>
+</div>
+
+<div class="third">
+  <div class="third-content-mobile">
+    <div class="third-content">
+      <div class="third-content-title">BRAND IDENTITY</div>
+      <div class="third-content-subtitle">Guidelines</div>
+    </div>
+    <div class="line"></div> <!-- line -->
+  </div>
+  <div class="third-content-ipad">
+    <div class="third-content-title-ipad">BRAND IDENTITY</div>
+    <div class="line-ipad"></div> <!-- line -->
+    <div class="third-content-subtitle-ipad">Guidelines</div>
+  </div>
+  <div class="third-content-desc">To stand out from an over-crowded music application market, I wanted to design an application that utilizes brilliant colors to capture everyone’s attention through aesthetics.</div>
+  <div class="view-website-container">
+  <a href="https://www.behance.net/gallery/52350115/uPlay" target="_blank" class="view-website view-uplay">VIEW CASE</a>
+  </div>
+</div>
+
+<div class="two-boxes">
+<!-- <a href="louden_.html"><div class="box-nav louden-box"></div></a>
+<a href="prandium_.html"><div class="box-nav prandium-box"></div></a>
+<a href="prandium_.html"><div class="box-nav prandium-box"></div></a> -->
+  <a href="art.html">  
+    <div class="tinted-image-art ipad-inside">
+     <div class="box-nav-main caption-nav-title">Art Department</div>
+    </div>
+  </a>
+  <a href="prandium.html">
+    <div class="tinted-image-prandium ipad-inside">
+      <div class="box-nav-main caption-nav-title">Prandium</div>
+    </div>
+  </a>
+  <a href="louden.html">
+    <div class="tinted-image-louden ipad-inside">
+      <div class="box-nav-main caption-nav-title">Louden Swain</div>
+    </div>
+  </a>
+</div>
+
+
+<div class="copy-main">© Keith Ferriols 2017</div>
+<script id="jsbin-javascript">
+var scrollTimeOut = true,
+    lastYPos = 0,
+    yPos = 0,
+    yPosDelta = 5,
+    nav = $('nav.navbar'),
+    navHeight = nav.outerHeight(),
+    setNavClass = function() {
+        scrollTimeOut = false;
+        yPos = $(window).scrollTop();
+
+        if(Math.abs(lastYPos - yPos) >= yPosDelta) {
+            if (yPos > lastYPos && yPos > navHeight){
+                nav.addClass('hide-nav');
+            } else {
+                nav.removeClass('hide-nav');
+            }
+            lastYPos = yPos;
+        }
+    };
+
+$(window).scroll(function(e){
+    scrollTimeOut = true;
+});
+
+setInterval(function() {
+    if (scrollTimeOut) {
+        setNavClass();
+    }
+
+}, 250);
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

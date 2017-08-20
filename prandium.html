@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+	<title>Prandium - Keith Ferriols</title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	<link rel="stylesheet" href="style_inner.css" />	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<script type="text/javascript">
+	$('body').addClass('prandium-background')
+</script>
+<header>
+  <nav class="navbar">
+    <div class="logo">
+    <a href="index.html">
+      <img src="img/logo-icon@2x.png" alt="" />
+    </a>
+    </div>
+  </nav>
+</header>
+
+<div class="header-container">
+	<div class="header prandium-header">
+	</div>
+	<div class="title">
+	<img src="img/prandium-assets/prandium-title@2x.png" alt="" />
+	</div>
+	<div class="description-details">
+	<div class="concept">CONCEPT</div>
+	<div class="description">This was a personal design exercise. I wanted to design a fictional restaurant website that feels seamless when it comes to user interaction. Breaking away from the traditional page-to-page navigation, this design explores the idea of single-page navigation. It is always exciting to approach unexplored new ideas.</div>
+	</div>
+</div>
+
+<div class="second-content">
+	<div class="desktop-prandium-full">
+		<img src="img/prandium-assets/desktop-prandium-full.png" alt="" />
+	</div>
+	<div class="color-info">
+		<div class="prandium-title-color">PRIMARY COLORS</div>
+		<div class="color-grid-pran">	
+			<div class="color primary-color-first-prandium css3-shadow">
+				<p>#FFF4F3</p>
+			</div>
+			<div class="color primary-color-second-prandium css3-shadow">
+				<p>#000</p>
+			</div>
+			<div class="color primary-color-third-prandium css3-shadow">
+				<p>#FFF</p>
+			</div>
+		</div>
+	</div>
+	<div class="desktop-prandium-half">
+		<img src="img/prandium-assets/desktop-prandium@2x.png" alt="" />
+	</div>
+</div>
+
+<div class="third">
+	<div class="third-content-mobile">
+		<div class="third-content">
+			<div class="third-content-title">BRAND IDENTITY</div>
+			<div class="third-content-subtitle">Guidelines</div>
+		</div>
+		<div class="line"></div> <!-- line -->
+	</div>
+	<div class="third-content-ipad">
+		<div class="third-content-title-ipad">BRAND IDENTITY</div>
+		<div class="line-ipad"></div> <!-- line -->
+		<div class="third-content-subtitle-ipad">Guidelines</div>
+	</div>
+	<div class="third-content-desc">The design uses distinctive colors to encapsulate luxurious perception throughout the website. By keeping the color palette to a minimum, the website maintains its simplicity and elegance. In addition to its minimal design, the design uses variety of bold images to entice its viewers.</div>
+  <div class="view-website-container">
+  <a href="http://keithferriols.com/prandium/" target="_blank" class="view-website view-prandium">VIEW WEBSITE</a>
+  </div>
+</div>
+
+<div class="two-boxes">
+<!-- <a href="art_.html"><div class="box-nav art-box"></div></a>
+<a href="louden_.html"><div class="box-nav louden-box-right"></div></a>
+<a href="prandium_.html"><div class="box-nav prandium-box"></div></a> -->
+  <a href="art.html">  
+    <div class="tinted-image-art ipad-inside">
+     <div class="box-nav-main caption-nav-title">Art Department</div>
+    </div>
+  </a>
+  <a href="uplay.html">
+    <div class="tinted-image-uplay ipad-inside">
+      <div class="box-nav-main caption-nav-title">uPlay</div>
+    </div>
+  </a>
+  <a href="louden.html">
+    <div class="tinted-image-louden ipad-inside">
+      <div class="box-nav-main caption-nav-title">Louden Swain</div>
+    </div>
+  </a>
+</div>
+
+
+<!-- <div class="copy copy-prandium">© KEITH FERRIOLS 2017</div> -->
+<div class="copy-main">© Keith Ferriols 2017</div>
+
+<script id="jsbin-javascript">
+var scrollTimeOut = true,
+    lastYPos = 0,
+    yPos = 0,
+    yPosDelta = 5,
+    nav = $('nav.navbar'),
+    navHeight = nav.outerHeight(),
+    setNavClass = function() {
+        scrollTimeOut = false;
+        yPos = $(window).scrollTop();
+
+        if(Math.abs(lastYPos - yPos) >= yPosDelta) {
+            if (yPos > lastYPos && yPos > navHeight){
+                nav.addClass('hide-nav');
+            } else {
+                nav.removeClass('hide-nav');
+            }
+            lastYPos = yPos;
+        }
+    };
+
+$(window).scroll(function(e){
+    scrollTimeOut = true;
+});
+
+setInterval(function() {
+    if (scrollTimeOut) {
+        setNavClass();
+    }
+
+}, 250);
+</script>
+
+
+</body>
+</html>

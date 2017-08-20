@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+	<title>Louden Swain - Keith Ferriols</title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	<link rel="stylesheet" href="style_inner.css" />	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<script type="text/javascript">
+	$('body').addClass('louden-background')
+</script>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+    <a href="index.html">
+      <img src="img/logo-icon@2x.png" alt="" />
+    </a>
+    </div>
+  </nav>
+</header>
+
+
+<div class="header-container">
+	<div class="header-tint-louden louden-header">
+	</div>
+	<div class="title-louden">
+	<img src="img/louden-assets/louden-title@2x.png" alt="" />
+	</div>
+	<div class="description-details">
+	<div class="concept concept-art">CONCEPT</div>
+	<div class="description description-art">Overlooking Louden Swain’s website, I wanted to create a simple redesign that feels unique to the artists and allows viewers to navigate the website with ease. The challenge was to keep color palette to a minimum to create a seamless experience for its user.</div>
+	</div>
+</div>
+
+<div class="second-content">
+	<div class="desktop-prandium-full">
+		<img src="img/louden-assets/desktop-louden-full.png" alt="" />
+	</div>
+	<div class="color-info">
+		<div class="prandium-title-color">PRIMARY COLORS</div>
+		<div class="color-grid-louden">	
+			<div class="color primary-color-first-louden css3-shadow">
+				<p>#FCC100</p>
+			</div>
+			<div class="color primary-color-second-louden css3-shadow">
+				<p>#000</p>
+			</div>
+			<div class="color primary-color-third-louden css3-shadow">
+				<p>#FFF</p>
+			</div>
+		</div>
+	</div>
+	<div class="desktop-prandium-half">
+		<img src="img/louden-assets/desktop-louden-half.png" alt="" />
+	</div>
+</div>
+
+<div class="third">
+	<div class="third-content-mobile">
+		<div class="third-content">
+			<div class="third-content-title">BRAND IDENTITY</div>
+			<div class="third-content-subtitle">Guidelines</div>
+		</div>
+		<div class="line"></div> <!-- line -->
+	</div>
+	<div class="third-content-ipad">
+		<div class="third-content-title-ipad">BRAND IDENTITY</div>
+		<div class="line-ipad"></div> <!-- line -->
+		<div class="third-content-subtitle-ipad">Guidelines</div>
+	</div>
+	<div class="third-content-desc">The redesigned website utilizes the yellowish color inherited from the previous website, but in combination with a darker shade color palette. This creates a greater contrast which ultimately leads to stronger visual appeal.</div>
+	
+	<div class="view-website-container">
+	<a href="http://keithferriols.com/louden/" target="_blank" class="view-website view-louden">VIEW WEBSITE</a>
+	</div>
+</div>
+
+
+
+<div class="two-boxes">
+   <a href="art.html">  
+    <div class="tinted-image-art ipad-inside">
+     <div class="box-nav-main caption-nav-title">Art Department</div>
+    </div>
+  </a>
+  <a href="prandium.html">
+    <div class="tinted-image-prandium ipad-inside">
+      <div class="box-nav-main caption-nav-title">Prandium</div>
+    </div>
+  </a>
+  <a href="uplay.html">
+    <div class="tinted-image-uplay ipad-inside">
+      <div class="box-nav-main caption-nav-title">uPlay</div>
+    </div>
+  </a>
+</div>
+<div class="copy-main">© Keith Ferriols 2017</div>
+<!-- <div class="copy copy-louden">© KEITH FERRIOLS 2017</div> -->
+
+<script id="jsbin-javascript">
+var scrollTimeOut = true,
+    lastYPos = 0,
+    yPos = 0,
+    yPosDelta = 5,
+    nav = $('nav.navbar'),
+    navHeight = nav.outerHeight(),
+    setNavClass = function() {
+        scrollTimeOut = false;
+        yPos = $(window).scrollTop();
+
+        if(Math.abs(lastYPos - yPos) >= yPosDelta) {
+            if (yPos > lastYPos && yPos > navHeight){
+                nav.addClass('hide-nav');
+            } else {
+                nav.removeClass('hide-nav');
+            }
+            lastYPos = yPos;
+        }
+    };
+
+$(window).scroll(function(e){
+    scrollTimeOut = true;
+});
+
+setInterval(function() {
+    if (scrollTimeOut) {
+        setNavClass();
+    }
+
+}, 250);
+</script>
+
+
+</body>
+</html>
